@@ -1,0 +1,29 @@
+<h1>Listing perfilclientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Perfil</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perfilclientes.each do |perfilcliente| %>
+      <tr>
+        <td><%= perfilcliente.cliente %></td>
+        <td><%= perfilcliente.perfil %></td>
+        <td><%= link_to 'Show', perfilcliente %></td>
+        <td><%= link_to 'Edit', edit_perfilcliente_path(perfilcliente) %></td>
+        <td><%= link_to 'Destroy', perfilcliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perfilcliente', new_perfilcliente_path %>

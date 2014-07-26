@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @grupocliente.descricao %>
+</p>
+
+<p>
+  <strong>Racio:</strong>
+  <%= @grupocliente.racio %>
+</p>
+
+<%= link_to 'Edit', edit_grupocliente_path(@grupocliente) %> |
+<%= link_to 'Back', grupoclientes_path %>

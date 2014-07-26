@@ -1,0 +1,33 @@
+<h1>Listing localidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cod postal</th>
+      <th>Localidade</th>
+      <th>Cidade</th>
+      <th>Pais</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @localidades.each do |localidade| %>
+      <tr>
+        <td><%= localidade.cod_postal %></td>
+        <td><%= localidade.localidade %></td>
+        <td><%= localidade.cidade %></td>
+        <td><%= localidade.pais %></td>
+        <td><%= link_to 'Show', localidade %></td>
+        <td><%= link_to 'Edit', edit_localidade_path(localidade) %></td>
+        <td><%= link_to 'Destroy', localidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Localidade', new_localidade_path %>

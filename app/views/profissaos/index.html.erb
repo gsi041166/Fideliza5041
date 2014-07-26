@@ -1,0 +1,27 @@
+<h1>Listing profissaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profissaos.each do |profissao| %>
+      <tr>
+        <td><%= profissao.descricao %></td>
+        <td><%= link_to 'Show', profissao %></td>
+        <td><%= link_to 'Edit', edit_profissao_path(profissao) %></td>
+        <td><%= link_to 'Destroy', profissao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profissao', new_profissao_path %>

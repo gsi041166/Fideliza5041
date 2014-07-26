@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cartao: MyString
+  nome: MyString
+  data_nasc: 2014-07-24
+  obs: MyText
+  rua: MyString
+  acumulado: 9.99
+  activo: false
+  profissao_id: 
+  grupocliente_id: 
+  localidade_id: 
+  loja_id: 
+  vendedor_id: 
+  sexo_id: 
+
+two:
+  cartao: MyString
+  nome: MyString
+  data_nasc: 2014-07-24
+  obs: MyText
+  rua: MyString
+  acumulado: 9.99
+  activo: false
+  profissao_id: 
+  grupocliente_id: 
+  localidade_id: 
+  loja_id: 
+  vendedor_id: 
+  sexo_id: 

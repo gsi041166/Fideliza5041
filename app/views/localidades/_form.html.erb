@@ -1,0 +1,33 @@
+<%= form_for(@localidade) do |f| %>
+  <% if @localidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@localidade.errors.count, "error") %> prohibited this localidade from being saved:</h2>
+
+      <ul>
+      <% @localidade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cod_postal %><br>
+    <%= f.text_field :cod_postal %>
+  </div>
+  <div class="field">
+    <%= f.label :localidade %><br>
+    <%= f.text_field :localidade %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :pais_id %><br>
+    <%= f.text_field :pais_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing grupoclientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Racio</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grupoclientes.each do |grupocliente| %>
+      <tr>
+        <td><%= grupocliente.descricao %></td>
+        <td><%= grupocliente.racio %></td>
+        <td><%= link_to 'Show', grupocliente %></td>
+        <td><%= link_to 'Edit', edit_grupocliente_path(grupocliente) %></td>
+        <td><%= link_to 'Destroy', grupocliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Grupocliente', new_grupocliente_path %>
