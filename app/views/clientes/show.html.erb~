@@ -57,7 +57,7 @@
 
 <p>
   <strong>Vendedor:</strong>
-  <%= @cliente.vendedor.descricao %>
+  <%= @cliente.vendedor.nome %>
 </p>
 
 <p>

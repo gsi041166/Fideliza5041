@@ -13,7 +13,7 @@ class ClientesController < ApplicationController
   end
 
   # GET /clientes/new
-  def new
+  def novo
     @cliente = Cliente.new
   end
 

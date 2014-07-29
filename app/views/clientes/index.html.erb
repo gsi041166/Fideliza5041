@@ -1,21 +1,11 @@
-<h1>Listing clientes</h1>
+<h1>Lista de clientes</h1>
 
 <table>
   <thead>
     <tr>
       <th>Cartao</th>
       <th>Nome</th>
-      <th>Data nasc</th>
-      <th>Obs</th>
-      <th>Rua</th>
-      <th>Acumulado</th>
-      <th>Activo</th>
-      <th>Profissao</th>
       <th>Grupocliente</th>
-      <th>Localidade</th>
-      <th>Loja</th>
-      <th>Vendedor</th>
-      <th>Sexo</th>
       <th></th>
       <th></th>
       <th></th>
@@ -27,20 +17,10 @@
       <tr>
         <td><%= cliente.cartao %></td>
         <td><%= cliente.nome %></td>
-        <td><%= cliente.data_nasc %></td>
-        <td><%= cliente.obs %></td>
-        <td><%= cliente.rua %></td>
-        <td><%= cliente.acumulado %></td>
-        <td><%= cliente.activo %></td>
-        <td><%= cliente.profissao %></td>
-        <td><%= cliente.grupocliente %></td>
-        <td><%= cliente.localidade %></td>
-        <td><%= cliente.loja %></td>
-        <td><%= cliente.vendedor %></td>
-        <td><%= cliente.sexo %></td>
-        <td><%= link_to 'Show', cliente %></td>
-        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= cliente.grupocliente.descricao %></td>
+        <td><%= link_to 'Ver', cliente %></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'Apagar', cliente, method: :delete, data: { confirm: 'Tens a certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -48,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= link_to 'Novo cliente', new_cliente_path %>

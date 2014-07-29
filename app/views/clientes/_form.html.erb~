@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :profissao_id %><br>
-    <%= f.text_field :profissao_id %>
+    <%= f.collection_select(:profissao_id, Profissao.all, :id, :descricao) %>
   </div>
   <div class="field">
     <%= f.label :grupocliente_id %><br>
@@ -57,12 +57,25 @@
   </div>
   <div class="field">
     <%= f.label :vendedor_id %><br>
-    <%= f.collection_select(:vendedor_id, Vendedor.all, :id, :nome) %>
+    <%= f.collection_select(:vendedor_id, Vendedor.all, :id, :descricao) %>
   </div>
   <div class="field">
     <%= f.label :sexo_id %><br>
     <%= f.collection_select(:sexo_id, Sexo.all, :id, :descricao) %>
   </div>
+
+
+
+
+
+
+
+<h1>PERFIL CLIENTE</h1>
+ 
+<% Perfil.find(:all).each do |c| %>
+        <%= check_box_tag 'cliente[perfil_ids][]', c.id, @cliente.perfils.include?(c) %><%= c.descricao %><br />
+    <% end %>
+</div>
   <div class="actions">
     <%= f.submit %>
   </div>
