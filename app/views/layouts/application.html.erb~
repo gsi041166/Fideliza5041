@@ -15,7 +15,7 @@
 <%= link_to "Profissoes", "/profissaos"  %>
 <%= link_to "Paises", "/pais"  %>
 <%= link_to "Localidades", "/localidades"  %>
-<%= link_to "Vendedores", "/vendedors"  %>
+<%= link_to "Vendedores", "/vendedores"  %>
 <%= link_to "Lojas", "/lojas"  %>
 
 <br>
