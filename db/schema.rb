@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140724213540) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "clientes", force: true do |t|
     t.string   "cartao"
     t.string   "nome"
@@ -31,12 +34,12 @@ ActiveRecord::Schema.define(version: 20140724213540) do
     t.datetime "updated_at"
   end
 
-  add_index "clientes", ["grupocliente_id"], name: "index_clientes_on_grupocliente_id"
-  add_index "clientes", ["localidade_id"], name: "index_clientes_on_localidade_id"
-  add_index "clientes", ["loja_id"], name: "index_clientes_on_loja_id"
-  add_index "clientes", ["profissao_id"], name: "index_clientes_on_profissao_id"
-  add_index "clientes", ["sexo_id"], name: "index_clientes_on_sexo_id"
-  add_index "clientes", ["vendedor_id"], name: "index_clientes_on_vendedor_id"
+  add_index "clientes", ["grupocliente_id"], name: "index_clientes_on_grupocliente_id", using: :btree
+  add_index "clientes", ["localidade_id"], name: "index_clientes_on_localidade_id", using: :btree
+  add_index "clientes", ["loja_id"], name: "index_clientes_on_loja_id", using: :btree
+  add_index "clientes", ["profissao_id"], name: "index_clientes_on_profissao_id", using: :btree
+  add_index "clientes", ["sexo_id"], name: "index_clientes_on_sexo_id", using: :btree
+  add_index "clientes", ["vendedor_id"], name: "index_clientes_on_vendedor_id", using: :btree
 
   create_table "grupoclientes", force: true do |t|
     t.string   "descricao"
@@ -54,7 +57,7 @@ ActiveRecord::Schema.define(version: 20140724213540) do
     t.datetime "updated_at"
   end
 
-  add_index "localidades", ["pais_id"], name: "index_localidades_on_pais_id"
+  add_index "localidades", ["pais_id"], name: "index_localidades_on_pais_id", using: :btree
 
   create_table "lojas", force: true do |t|
     t.string   "descricao"
@@ -75,8 +78,8 @@ ActiveRecord::Schema.define(version: 20140724213540) do
     t.datetime "updated_at"
   end
 
-  add_index "perfilclientes", ["cliente_id"], name: "index_perfilclientes_on_cliente_id"
-  add_index "perfilclientes", ["perfil_id"], name: "index_perfilclientes_on_perfil_id"
+  add_index "perfilclientes", ["cliente_id"], name: "index_perfilclientes_on_cliente_id", using: :btree
+  add_index "perfilclientes", ["perfil_id"], name: "index_perfilclientes_on_perfil_id", using: :btree
 
   create_table "perfils", force: true do |t|
     t.string   "descricao"
