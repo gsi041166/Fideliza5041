@@ -70,7 +70,7 @@
 
 
 
-<h1>PERFIL CLIENTE</h1>
+<h1>PERFILES CLIENTE</h1>
 
 <% Perfil.find(:all).each do |c| %>
         <%= check_box_tag 'cliente[perfil_ids][]', c.id, @cliente.perfils.include?(c) %><%= c.descricao %><br />
