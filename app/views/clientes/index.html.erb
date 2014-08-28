@@ -9,18 +9,7 @@
       <th><%= model_class.human_attribute_name(:cartao) %></th>
       <th><%= model_class.human_attribute_name(:nome) %></th>
       <th><%= Loja %></th>
-      <!--><th><%= model_class.human_attribute_name(:data_nasc) %></th>
-      <th><%= model_class.human_attribute_name(:obs) %></th>
-      <th><%= model_class.human_attribute_name(:rua) %></th>
-      <th><%= model_class.human_attribute_name(:acumulado) %></th>
-      <th><%= model_class.human_attribute_name(:activo) %></th>
-      <th><%= model_class.human_attribute_name(:profissao_id) %></th>
-      <th><%= model_class.human_attribute_name(:grupocliente_id) %></th>
-      <th><%= model_class.human_attribute_name(:localidade_id) %></th>
-      <th><%= model_class.human_attribute_name(:loja_id) %></th>
-      <th><%= model_class.human_attribute_name(:vendedor_id) %></th>
-      <th><%= model_class.human_attribute_name(:sexo_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th></-->
+
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -31,18 +20,7 @@
         <td><%= link_to cliente.cartao, cliente_path(cliente) %></td>
         <td><%= cliente.nome %></td>
         <td><%= cliente.loja.descricao %></td>
-        <!--><td><%= cliente.data_nasc %></td>
-        <td><%= cliente.obs %></td>
-        <td><%= cliente.rua %></td>
-        <td><%= cliente.acumulado %></td>
-        <td><%= cliente.activo %></td>
-        <td><%= cliente.profissao_id %></td>
-        <td><%= cliente.grupocliente_id %></td>
-        <td><%= cliente.localidade_id %></td>
-        <td><%= cliente.loja_id %></td>
-        <td><%= cliente.vendedor_id %></td>
-        <td><%= cliente.sexo_id %></td>
-        <td><%=l cliente.created_at %></td></-->
+      
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_cliente_path(cliente), :class => 'btn btn-mini' %>
