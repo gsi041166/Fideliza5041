@@ -1,33 +1,32 @@
-<%= form_for(@localidade) do |f| %>
-  <% if @localidade.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@localidade.errors.count, "error") %> prohibited this localidade from being saved:</h2>
-
-      <ul>
-      <% @localidade.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @localidade, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :cod_postal, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cod_postal, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :localidade, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :localidade, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cidade, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cidade, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pais_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:pais_id, Pai.all, :id, :descricao) %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :cod_postal %><br>
-    <%= f.text_field :cod_postal %>
-  </div>
-  <div class="field">
-    <%= f.label :localidade %><br>
-    <%= f.text_field :localidade %>
-  </div>
-  <div class="field">
-    <%= f.label :cidade %><br>
-    <%= f.text_field :cidade %>
-  </div>
-  <div class="field">
-    <%= f.label :pais_id %><br>
-    <%= f.collection_select(:pais_id, Pai.all, :id, :descricao) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                localidades_path, :class => 'btn' %>
   </div>
 <% end %>

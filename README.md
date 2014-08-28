@@ -90,4 +90,55 @@ rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed clientes -f
       create  app/views/clientes/_form.html.erb
       create  app/views/clientes/show.html.erb
 
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed perfils -f
+       force  app/views/perfils/index.html.erb
+       force  app/views/perfils/new.html.erb
+       force  app/views/perfils/edit.html.erb
+       force  app/views/perfils/_form.html.erb
+       force  app/views/perfils/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed sexos -f
+       force  app/views/sexos/index.html.erb
+       force  app/views/sexos/new.html.erb
+       force  app/views/sexos/edit.html.erb
+       force  app/views/sexos/_form.html.erb
+       force  app/views/sexos/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed grupoclientes -f
+       force  app/views/grupoclientes/index.html.erb
+       force  app/views/grupoclientes/new.html.erb
+       force  app/views/grupoclientes/edit.html.erb
+       force  app/views/grupoclientes/_form.html.erb
+       force  app/views/grupoclientes/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed localidades -f
+       force  app/views/localidades/index.html.erb
+       force  app/views/localidades/new.html.erb
+       force  app/views/localidades/edit.html.erb
+       force  app/views/localidades/_form.html.erb
+       force  app/views/localidades/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed lojas -f
+       force  app/views/lojas/index.html.erb
+       force  app/views/lojas/new.html.erb
+       force  app/views/lojas/edit.html.erb
+       force  app/views/lojas/_form.html.erb
+       force  app/views/lojas/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed pais -f
+       force  app/views/pais/index.html.erb
+       force  app/views/pais/new.html.erb
+       force  app/views/pais/edit.html.erb
+       force  app/views/pais/_form.html.erb
+       force  app/views/pais/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed profissaos -f
+       force  app/views/profissaos/index.html.erb
+       force  app/views/profissaos/new.html.erb
+       force  app/views/profissaos/edit.html.erb
+       force  app/views/profissaos/_form.html.erb
+       force  app/views/profissaos/show.html.erb
+rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed vendedors -f
+       force  app/views/vendedors/index.html.erb
+       force  app/views/vendedors/new.html.erb
+       force  app/views/vendedors/edit.html.erb
+       force  app/views/vendedors/_form.html.erb
+       force  app/views/vendedors/show.html.erb
+       
+       
+       
 
