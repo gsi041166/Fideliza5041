@@ -1,82 +1,102 @@
-<%= form_for(@cliente) do |f| %>
-  <% if @cliente.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
-
-      <ul>
-      <% @cliente.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @cliente, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :cartao, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cartao, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :nome, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nome, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :data_nasc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :data_nasc, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :obs, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :obs, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :rua, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rua, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :acumulado, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :acumulado, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :activo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :activo, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :profissao_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:profissao_id, Profissao.all, :id, :descricao) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :grupocliente_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:grupocliente_id, Grupocliente.all, :id, :descricao) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :localidade_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:localidade_id, Localidade.all, :id, :localidade) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :loja_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:loja_id, Loja.all, :id, :descricao) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :vendedor_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:vendedor_id, Vendedor.all, :id, :descricao) %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :sexo_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select(:sexo_id, Sexo.all, :id, :descricao) %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :cartao %><br>
-    <%= f.text_field :cartao %>
-  </div>
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :data_nasc %><br>
-    <%= f.date_select :data_nasc %>
-  </div>
-  <div class="field">
-    <%= f.label :obs %><br>
-    <%= f.text_area :obs %>
-  </div>
-  <div class="field">
-    <%= f.label :rua %><br>
-    <%= f.text_field :rua %>
-  </div>
-  <div class="field">
-    <%= f.label :acumulado %><br>
-    <%= f.text_field :acumulado %>
-  </div>
-  <div class="field">
-    <%= f.label :activo %><br>
-    <%= f.check_box :activo %>
-  </div>
-  <div class="field">
-    <%= f.label :profissao_id %><br>
-    <%= f.collection_select(:profissao_id, Profissao.all, :id, :descricao) %>
-  </div>
-  <div class="field">
-    <%= f.label :grupocliente_id %><br>
-    <%= f.collection_select(:grupocliente_id, Grupocliente.all, :id, :descricao) %>
-  </div>
-  <div class="field">
-    <%= f.label :localidade_id %><br>
-    <%= f.collection_select(:localidade_id, Localidade.all, :id, :localidade) %>
-  </div>
-  <div class="field">
-    <%= f.label :loja_id %><br>
-    <%= f.collection_select(:loja_id, Loja.all, :id, :descricao) %>
-  </div>
-  <div class="field">
-    <%= f.label :vendedor_id %><br>
-    <%= f.collection_select(:vendedor_id, Vendedor.all, :id, :descricao) %>
-  </div>
-  <div class="field">
-    <%= f.label :sexo_id %><br>
-    <%= f.collection_select(:sexo_id, Sexo.all, :id, :descricao) %>
-  </div>
 
 
 
-
-
-
-
-<h1>PERFIL CLIENTE</h1>
-
-<% Perfil.find(:all).each do |c| %>
+<div class="control-group">
+    <%= f.label "PERFIL CLIENTE", :class => 'control-label' %>
+    <div class="controls">
+      <% Perfil.find(:all).each do |c| %>
         <%= check_box_tag 'cliente[perfil_ids][]', c.id, @cliente.perfils.include?(c) %><%= c.descricao %><br />
-    <% end %>
-</div>
-  <div class="actions">
-    <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+  
+
+
+
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                clientes_path, :class => 'btn' %>
   </div>
 <% end %>
