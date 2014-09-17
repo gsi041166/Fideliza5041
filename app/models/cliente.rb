@@ -1,6 +1,5 @@
 class Cliente < ActiveRecord::Base
-  validates_presence_of :cartao, message: "deve ser preenchido"
-  validates_presence_of :nome, message: "deve ser preenchido"
+  validates :cartao, :nome, :presence => {message: "Deve ser preenchido..."}
 
   belongs_to :profissao
   belongs_to :grupocliente
@@ -11,4 +10,5 @@ class Cliente < ActiveRecord::Base
 
   has_many :perfilclientes
   has_many :perfils, through: :perfilclientes
+
 end
