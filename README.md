@@ -141,4 +141,24 @@ rui@rui-Aspire-M3-581T:~/rails/Fideliza$ rails g bootstrap:themed vendedors -f
        
        
        
+       
+REF para validações: http://apidock.com/rails/ActiveModel/Validations/ClassMethods/validates
+
+LINK COM MUITAS TRADUCOES: https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale
+       
+
+-------------------------------------------------------------------
+TABELAS COM PESQUISA:
+http://railscasts.com/episodes/240-search-sort-paginate-with-ajax
+http://datatables.net/examples/styling/bootstrap.html
+http://deepakrip007.wordpress.com/2013/10/04/implementing-data-table-in-rails/
+http://railscasts.com/episodes/228-sortable-table-columns
+http://railscasts.com/episodes/240-search-sort-paginate-with-ajax
+
+mostrar aqui que se pode fazer de varias formas, ate injetar um JSON na tabela e o DATATABLE trata de renderizar e filtrar....
+--------------------------------------------------------------------
+
+CONFIGURACOES DOS LINKS:
+http://stackoverflow.com/questions/9401942/using-link-to-with-embedded-html
+
 
