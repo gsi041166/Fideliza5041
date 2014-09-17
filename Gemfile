@@ -6,7 +6,7 @@ ruby '2.1.0'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+
 
 gem 'rails_12factor'
 
@@ -31,9 +31,18 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+
+gem 'pg'
+
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+
+gem 'jquery-datatables-rails'
+gem 'jquery-ui-rails'
+
+gem 'will_paginate'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
