@@ -31,16 +31,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-
 gem 'pg'
 
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 
-gem 'jquery-datatables-rails'
+gem 'jquery-datatables-rails', '~> 1.12.2'
 gem 'jquery-ui-rails'
-
 gem 'will_paginate'
 
 

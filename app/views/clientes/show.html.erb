@@ -1,7 +1,9 @@
 <%- model_class = Cliente -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
+<ul class="breadcrumb">
+	<li><strong><%= link_to model_class.model_name.human.pluralize.titleize, "/clientes"  %></strong>
+	 <span class="divider">/</span></li>
+	<li class="active"><%=t '.title', :default => [:'helpers.titles.show', 'Show %{model}'], :model => model_class.model_name.human.titleize %></li>
+</ul>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:cartao) %>:</strong></dt>

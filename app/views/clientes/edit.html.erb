@@ -1,9 +1,9 @@
 <%- model_class = Cliente -%>
 
     <ul class="breadcrumb">
-    <li><a href="#"><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></a> <span class="divider">/</span></li>
-    <li><a href="#">Library</a> <span class="divider">/</span></li>
-    <li class="active">Data</li>
+    	<li><strong><%= link_to model_class.model_name.human.pluralize.titleize, "/clientes"  %></strong>
+    	 <span class="divider">/</span></li>
+    	<li class="active"><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></li>
     </ul>
 
 <%= render :partial => 'form' %>

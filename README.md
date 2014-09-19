@@ -152,8 +152,7 @@ TABELAS COM PESQUISA:
 http://railscasts.com/episodes/240-search-sort-paginate-with-ajax
 http://datatables.net/examples/styling/bootstrap.html
 http://deepakrip007.wordpress.com/2013/10/04/implementing-data-table-in-rails/
-http://railscasts.com/episodes/228-sortable-table-columns
-http://railscasts.com/episodes/240-search-sort-paginate-with-ajax
+http://railscasts.com/episodes/228-sortable-table-columns 
 
 mostrar aqui que se pode fazer de varias formas, ate injetar um JSON na tabela e o DATATABLE trata de renderizar e filtrar....
 --------------------------------------------------------------------
@@ -161,4 +160,22 @@ mostrar aqui que se pode fazer de varias formas, ate injetar um JSON na tabela e
 CONFIGURACOES DOS LINKS:
 http://stackoverflow.com/questions/9401942/using-link-to-with-embedded-html
 
+--------------------------------------------------------------------
+removido twitter-bootstrap porque esta descontinuado:
+
+1º rails destroy bootstrap:install
+2º apagar a gem da fileGEM
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
+http://stackoverflow.com/questions/10639798/uninstalling-twitter-bootstrap-from-a-rails-app
+---------------------------------------------------------------------
+
+
+problema de nao aparecer a paginacao c o tema do bootstrap
+
+https://github.com/rweng/jquery-datatables-rails/issues/94
+
+---------------------------------------------------------------------
 
