@@ -179,3 +179,14 @@ https://github.com/rweng/jquery-datatables-rails/issues/94
 
 ---------------------------------------------------------------------
 
+problema de nao fazer o push para o heroku, porque precisava que adiciona--se os precompiladores ou caralho....
+http://stackoverflow.com/questions/9794413/failed-to-push-some-refs-to-githeroku-com
+
+$ rake assets:precompile
+$ git add .
+$ git commit -m "Add precompiled assets for Heroku"
+$ git push heroku master
+
+-----------------------------------------------------------------------
+
+
