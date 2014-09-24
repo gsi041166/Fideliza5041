@@ -14,7 +14,6 @@
       <tr>
         <td><%= link_to '<i class="icon-file"></i>'.html_safe, profissao_path(profissao) %></td>
         <td><%= profissao.descricao %></td>
-        <td><%=l profissao.created_at %></td>
         <td>
           <%= link_to '<i class="icon-pencil"></i>'.html_safe,
                       edit_profissao_path(profissao), :class => 'btn btn-mini' %>
