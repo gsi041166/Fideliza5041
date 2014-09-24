@@ -17,7 +17,7 @@
 			  <div class="control-group">
 			    <%= f.label :data_nasc, :class => 'control-label' %>
 			    <div class="controls">
-			      <%= f.text_field :data_nasc, :class => 'text_field', :id =>"datepicker" %>
+			      <%= f.text_field :data_nasc, :class => 'text_field' %>
 			    </div>
 			  </div>
 			
@@ -30,7 +30,7 @@
 			  <div class="control-group">
 			    <%= f.label :localidade_id, :class => 'control-label input-sm' %>
 			    <div class="controls">
-			      <%= f.collection_select(:localidade_id, Localidade.all, :id, :localidade, :class => 'form-control input-sm') %>
+			      <%= f.collection_select(:localidade_id, Localidade.all, :id, :codpostal_localidade, :class => 'form-control input-sm') %>
 			    </div>
 			  </div> 
 			  
