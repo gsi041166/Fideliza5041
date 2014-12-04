@@ -1,4 +1,6 @@
 Fideliza::Application.routes.draw do
+  resources :contactos
+
   resources :clientes
 
   resources :perfilclientes

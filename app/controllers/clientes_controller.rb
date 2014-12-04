@@ -20,6 +20,11 @@ class ClientesController < ApplicationController
   # GET /clientes/new
   def new
     @cliente = Cliente.new
+    
+    #vai buscar todos os tips de contactos e inicializa-os no cliente
+    Tipocontacto.all.each do |t|
+       @cliente.contactos.build(tipocontacto_id: t.id)
+    end
   end
 
   # GET /clientes/1/edit
@@ -92,7 +97,9 @@ class ClientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cliente_params
-      params.require(:cliente).permit(:cartao, :nome, :data_nasc, :obs, :rua, :acumulado, :activo, :profissao_id, :grupocliente_id, :localidade_id, :loja_id, :vendedor_id, :sexo_id)
+      params.require(:cliente).permit(:cartao, :nome, :data_nasc, :obs, :rua, :acumulado, :activo, 
+                  :profissao_id, :grupocliente_id, :localidade_id, :loja_id, :vendedor_id, :sexo_id,
+                  :contactos_attributes => [:id, :cliente_id, :tipocontacto_id, :contacto])
     end
     
 

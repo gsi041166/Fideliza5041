@@ -5,6 +5,7 @@
 			    <%= f.label :cartao, :class => 'control-label' %>
 			    <div class="controls">
 			      <%= f.text_field :cartao, :class => 'text_field' %>
+			      <input type="text" placeholder="Type something…" id="cartaodd">
 			    </div>
 			  </div>
 			
@@ -48,14 +49,29 @@
 			      <%= f.collection_select(:profissao_id, Profissao.all, :id, :descricao) %>
 			    </div>
 			  </div>
-		</div>
-		<div class="span6">
-			 <div class="control-group">
+			<div class="control-group">
 			    <%= f.label :grupocliente_id, :class => 'control-label' %>
 			    <div class="controls">
 			      <%= f.collection_select(:grupocliente_id, Grupocliente.all, :id, :descricao) %>
 			    </div>
+			  </div>  
+		  <div class="control-group">
+			    <%= f.label :obs, :class => 'control-label' %>
+			    <div class="controls">
+			  
+			      <textarea id="obs" rows="3"></textarea>
+			    </div>
 			  </div>
+			  <div class="control-group">
+			    <%= f.label :activo, :class => 'control-label' %>
+			    <div class="controls">
+			      <%= f.check_box :activo, :class => 'text_field' %>
+			    </div>
+			  </div>
+			  
+		</div>
+		<div class="span6">
+
 			
 			  <div class="control-group">
 			    <%= f.label :loja_id, :class => 'control-label' %>
@@ -69,20 +85,21 @@
 			      <%= f.collection_select(:vendedor_id, Vendedor.all, :id, :descricao) %>
 			    </div>
 			  </div>
-			  <div class="control-group">
-			    <%= f.label :obs, :class => 'control-label' %>
-			    <div class="controls">
-			      <%= f.text_field :obs, :class => 'text_field' %>
-			    </div>
-			  </div>
-			  <div class="control-group">
-			    <%= f.label :activo, :class => 'control-label' %>
-			    <div class="controls">
-			      <%= f.check_box :activo, :class => 'text_field' %>
-			    </div>
-			  </div>
 			  
 			
+			<div class="control-group">
+			    <%= f.label "CONTACTOS CLIENTE", :class => 'control-label' %>
+			    <div class="controls">
+					  <%= f.fields_for :contactos do |a| -%> 
+				
+							<%= a.hidden_field :id %>
+							<%= a.hidden_field :cliente_id %>
+							<%= a.text_field :tipocontacto_id, :class => 'text_field' %>
+					        <%= a.text_field :contacto, :class => 'text_field' %><br />
+					                
+				      <% end -%>
+			    </div>
+			  </div>
 			<div class="control-group">
 			    <%= f.label "PERFIL CLIENTE", :class => 'control-label' %>
 			    <div class="controls">
@@ -90,7 +107,8 @@
 			        <%= check_box_tag 'cliente[perfil_ids][]', c.id, @cliente.perfils.include?(c) %><%= c.descricao %><br />
 			      <% end %>
 			    </div>
-			  </div>
+			  </div>			  
+			  
 		</div>
 	</div>
 
